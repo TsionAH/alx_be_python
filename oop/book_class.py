@@ -1,5 +1,5 @@
 class Book:
-    def init(self, title: str, author: str, year: int):
+    def __init__(self, title: str, author: str, year: int):
         """Constructor: Initializes a Book instance."""
         self.title = title
         self.author = author
@@ -9,10 +9,10 @@ class Book:
         """Destructor: Called when the object is deleted."""
         print(f"Deleting {self.title}")
 
-    def str(self):
+    def __str__(self):
         """Informal string representation (for end users)."""
         return f"{self.title} by {self.author}, published in {self.year}"
 
-    def repr(self):
+    def __repr__(self):
         """Official string representation (for developers)."""
         return f"Book('{self.title}', '{self.author}', {self.year})"
